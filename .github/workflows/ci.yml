@@ -25,10 +25,8 @@ jobs:
         run: go install github.com/securego/gosec/v2/cmd/gosec@latest
 
       - name: Run gosec
-        run: test -z $(gosec ./...)
+        run: gosec ./...
 
-      - name: Gosec result
-        run: echo $?
 
   style:
     name: Style
